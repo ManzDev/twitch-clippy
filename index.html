@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clippy JS</title>
+  
+  
+  <script type="module" crossorigin src="/twitch-clippy/index.b28b5843.js"></script>
+  <link rel="stylesheet" href="/twitch-clippy/index.6c9bb87d.css">
+</head>
+<body>
+
+  <div class="container">
+    <clippy-character no-paper></clippy-character>
+  </div>
+
+  <script>
+    const clippy = document.querySelector("clippy-character");
+
+    setInterval(() => {
+      clippy.classList.add("blink");
+      setTimeout(() => clippy.classList.remove("blink"), 350);
+    }, 4000);
+    setTimeout(() => {
+      clippy.setAttribute("evil", true);
+      clippy.setText("<p>¡Pero al menos di algo!</p>");
+    }, 20000);
+  </script>
+
+</body>
+</html>
