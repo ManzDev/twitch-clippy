@@ -3,6 +3,8 @@ body {
 }
 
 .container {
-  display: inline-block;
-  transform: translateX(50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 }
